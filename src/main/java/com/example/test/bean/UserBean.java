@@ -5,6 +5,18 @@ public class UserBean {
     private String name;
     private String password;
 
+    public UserBean(){
+        super();
+    }
+
+    public UserBean(int id,String name,String password){
+        super();
+        this.id =id;
+        this.name = name;
+        this.password = password;
+
+    }
+
     public int getId() {
         return id;
     }
@@ -27,6 +39,12 @@ public class UserBean {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User[id=" + id+ ", name=" + name + ", password=" + password
+                + "]";
     }
 }
 
